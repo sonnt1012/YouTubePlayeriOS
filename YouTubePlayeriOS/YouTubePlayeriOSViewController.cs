@@ -44,7 +44,7 @@ namespace YouTubePlayeriOS
 				{"modestbranding" , 0}
 			};
 
-			player.LoadWithPlaylistId ("PLM75ZaNQS_Fa-rPUZPdK9EejObe-AkkGz", playerVars);
+			player.LoadWithPlaylistId ("PL80lRwqt0KxVVhgvTiA0T2i7bx-UUrZt3", playerVars);
 			player.PlayerStateChanged += (object sender, PlayerState e) => {
 				PlayerStatus.Text = e.ToString();
 			};	
