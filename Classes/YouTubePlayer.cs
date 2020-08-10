@@ -852,10 +852,6 @@ namespace YouTube
             }
             if (action == OnReady && PlayerViewReady != null)
             {
-                if (InitialLoadingView != null)
-                {
-                    InitialLoadingView.RemoveFromSuperview();
-                }
                 PlayerViewReady(this, new EventArgs());
             }
             else if (action == OnStateChange && PlayerStateChanged != null)
@@ -945,9 +941,6 @@ namespace YouTube
             {
                 defaultPlayerParams.Add("playerVars", new Dictionary<string, object>());
             }
-            Dictionary<string, object> playerVars = (Dictionary<string, object>)defaultPlayerParams["playerVars"];
-            playerVars.Add("origin", OriginURL.AbsoluteString);
-            defaultPlayerParams["playerVars"] = playerVars;
 
             string path = Path.Combine(NSBundle.MainBundle.BundlePath, HTMLTemplatePath);
 
